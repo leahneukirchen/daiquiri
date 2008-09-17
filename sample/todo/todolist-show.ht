@@ -1,0 +1,15 @@
+<h1>$todolist.title</h1>
+
+<ul>
+$ todolist.load_items.each { |item|
+<li><a $:{item.done && "style='font-style: italic'"} href="$item.href">$item.description</a>
+  <form method=POST action="$item.href/finish">
+    <input type=submit value="Done!">
+  </form>
+</li>
+$ }
+</ul>
+
+<form method=POST action="$todolist.href/add">
+<input size=32 name=description> <input type=submit value="Add!">
+</form>

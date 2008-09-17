@@ -1,0 +1,12 @@
+Welcome to ToDo List!
+
+<ul>
+$ lists.each { |list|
+<ul><a href="${list.href}">${list.title}</a></ul>
+$ }
+</ul>
+
+<form method=POST>
+  Create a new list named <input size=32 name=title>.
+  <input type=submit value="Create!">
+</form>
